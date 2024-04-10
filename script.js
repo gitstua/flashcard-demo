@@ -13,13 +13,19 @@ topic.textContent = fragment;
 
 const questionsFile = `questions-${fragment.replace(' ', '-')}.txt`;
 
+const flashcardContainer = document.getElementById('flashcard-container');
 
 // Read questions from a file using JavaScript
 fetch(questionsFile)
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            flashcardContainer.innerText = `Could not find file: ${questionsFile}`;
+            return;
+        }
+        return response.text();
+    })
     .then(data => {
         const lines = data.split('\n');
-        const flashcardContainer = document.getElementById('flashcard-container');
 
         // update the score
         const total = document.getElementById('total');
@@ -107,3 +113,8 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
+window.addEventListener('hashchange', function() {
+    // reload the url
+    location.reload();
+});
