@@ -46,12 +46,31 @@ h2.question {
     color: white; /* White text */
     border: 2px solid #4CAF50; /* Green border */
     font-weight: bold; /* Bold text */
-    box-shadow: 0 0 10px #4CAF50; /* Green box shadow */
+    box-shadow: 0 0 20px #4CAF50; /* Green box shadow */
+}
+
+.incorrect-answer {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+
+    /* make border dotted red */
+    border: 2px solid #f44336; /* Red border */
+    
+    font-weight: bold; /* Bold text */
+    /* box-shadow: 0 0 10px #f44336; Red box shadow */
+
+    /* put a black line at the bottom */
+    border-bottom: 2px solid black;
+
+}
+
+#score-header {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #topic{
     font-weight: bolder;
-
 }
 
 header {

@@ -74,7 +74,7 @@ fetch(questionsFile)
                         answerCard.classList.add('correct-answer');
                         // answerCard.style.backgroundColor = 'green';
                     } else {
-                        answerCard.style.backgroundColor = 'red';
+                        answerCard.classList.add('incorrect-answer');
                     }
 
                     // Update all other answer cards to default color
@@ -83,6 +83,7 @@ fetch(questionsFile)
                             card.style.backgroundColor = '';
                             // remove correct-answer class from element
                             card.classList.remove('correct-answer');
+                            card.classList.remove('incorrect-answer');
                         }
                     });
 
@@ -99,8 +100,9 @@ function recalculateScore() {
     const answerCards = document.querySelectorAll('.answer');
     let correctCount = 0;
 
+    // count the number of cards with the correct-answer class
     answerCards.forEach(card => {
-        if (card.style.backgroundColor === 'green') {
+        if (card.classList.contains('correct-answer')) {
             correctCount++;
         }
     });
