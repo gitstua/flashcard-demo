@@ -1,5 +1,21 @@
+//read the html fragment and use this as the suffix for questions-.txt
+const url = new URL(window.location.href);
+let fragment = url.hash.substring(1);
+
+//default to actions if no fragment is provided
+if (fragment === '') {
+    fragment = 'GitHub Actions';
+}
+
+//set the topic
+const topic = document.getElementById('topic');
+topic.textContent = fragment;
+
+const questionsFile = `questions-${fragment.replace(' ', '-')}.txt`;
+
+
 // Read questions from a file using JavaScript
-fetch('questions.txt')
+fetch(questionsFile)
     .then(response => response.text())
     .then(data => {
         const lines = data.split('\n');

@@ -1,0 +1,5 @@
+What is the most popular dog breed in the United States?, Labrador Retriever, German Shepherd, Golden Retriever
+What is the smallest dog breed in the world?, Chihuahua, Pomeranian, Yorkshire Terrier
+Which dog breed is known for its wrinkled skin?, Shar Pei, Bulldog, Basset Hound
+What is the largest dog breed in the world?, Great Dane, Saint Bernard, Irish Wolfhound
+Which dog breed is often associated with fire departments?, Dalmatian, Boxer, Doberman Pinscher

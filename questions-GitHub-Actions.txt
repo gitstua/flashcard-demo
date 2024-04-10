@@ -1,0 +1,46 @@
+What is the name of the file that defines a workflow?, .github/workflows, .github/actions, .github/config
+What is the syntax for triggering a workflow on a push event?, on: push, trigger: push, push: on
+What are the reusable components of a workflow called?, actions, steps, tasks
+How do you specify the environment to run a job on?, runs-on, env, platform
+How do you run a shell command in a step?, run, exec, cmd
+How do you use an action from the GitHub Marketplace?, uses, imports, requires
+How do you pass data between steps?, outputs, inputs, variables
+How do you set up a matrix of different configurations for a job?, matrix, array, list
+How do you conditionally execute a step?, if, when, condition
+How do you access the value of a secret in a step?, ${{ secrets.NAME }}, ${{ env.NAME }}, ${{ secrets.name }}
+How do you cache dependencies to speed up a workflow?, actions/cache, actions/store, actions/save
+How do you create a custom action?, action.yml, action.js, action.sh
+How do you specify the name and description of a workflow?, name, description, title
+How do you use environment variables in a step?, ${{ env.NAME }}, ${ env.NAME }, $env.NAME
+How do you run a workflow manually?, workflow_dispatch, manual_trigger, run_now
+How do you schedule a workflow to run at a specific time?, cron, timer, schedule
+How do you use artifacts to share data between jobs?, upload-artifact, download-artifact, transfer-artifact
+How do you use expressions to evaluate conditions?, ${{ expression }}, ${ expression }, $( expression )
+How do you use context objects to access information about the workflow?, ${{ context.name }}, ${ context.name }, $( context.name )
+How do you use the GitHub API in a workflow?, actions/github-script, actions/github-api, actions/github-client
+How do you skip a workflow based on the commit message?, [skip ci], [ci-skip], [no ci]
+How do you use a self hosted runner to run a workflow?, self-hosted, local, custom
+How do you label a workflow run for easier filtering?, labels, tags, categories
+How do you use a Docker container as an action?, image: my-docker-image:latest, uses: image, container: image
+How do you group multiple steps for re-use?, composite, group, bundle
+How do you use a JavaScript action to run custom code?, node12, javascript, script
+How do you run Python code?, python, python-script, python-action
+How do you run custom bash script code?, bash, shell, bash-script
+How do you pass parameters to an action?, inputs, args, params
+How do you return values from an action?, outputs, returns, results
+How do you clone a repository?, actions/checkout, actions/clone, actions/git
+How do you install a specific version of Node.js?, actions/setup-node, actions/install-node, actions/node
+How do you install a specific version of Python?, actions/setup-python, actions/install-python, actions/python
+How do you a specific version of Java?, actions/setup-java, actions/install-java, actions/java
+How do you specify the default branch for a workflow?,  defaults.branch, on.branch, branch.default
+How do you specify the working directory for a step?,  working-directory, dir, cwd
+How do you specify the timeout for a job or a step?,  timeout-minutes, timeout, time-limit
+How do you specify the concurrency for a job or a workflow?,  concurrency, parallelism, limit
+How do you specify the permissions for a job or a workflow?,  permissions, access, scope
+How do you specify the needs for a job to depend on another job?,  needs, depends_on, requires
+How do you specify the strategy for a job to handle failures?,  strategy, retry, fail-fast
+How do you specify the continue-on-error for a step to ignore failures?,  continue-on-error, ignore-error, skip-error
+How do you specify the id for a step to reference it later?,  id, name, label
+How do you specify the with for a step to pass arguments to an action?,  with, args, params
+How do you install a specific version of Ruby?, actions/setup-ruby, actions/install-ruby, actions/ruby
+How do you install a specific version of Go?, actions/setup-go, actions/install-go, actions/go

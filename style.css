@@ -1,3 +1,9 @@
+:root {
+    --accent-bg: #f0f0f0;
+    --border: #000;
+    text-align: center;
+}
+
 .flashcard {
     border: 1px solid #000;
     padding: 10px;
@@ -12,9 +18,9 @@
 }
 
 body{
-    padding-top: 7em;
+    padding-top: 8em;
     /* make inline block */
-    
+    font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
 }
 
 h2.question {
@@ -34,9 +40,31 @@ h2.question {
     flex-wrap:wrap;
     justify-content: space-between;
 }
+
+#topic{
+    font-weight: bolder;
+
+}
+
 header {
     position: fixed;
     top: 0;
     width: 100%;
 
+    background-color: var(--accent-bg);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 0 .5rem 2rem;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    background-color: var(--accent-bg);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 2rem 0;
+    margin-top: 10em;   
 }
