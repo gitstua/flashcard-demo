@@ -1,0 +1,5 @@
+GitHub Actions language?,YAML,Python,Java
+Actions default branch?,master,main,dev
+Workflow trigger event?,push,pull,clone
+Actions artifact storage?,days,weeks,months
+Actions max concurrent jobs?,20,200,2000

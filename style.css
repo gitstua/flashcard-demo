@@ -1,0 +1,42 @@
+.flashcard {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 100px;
+    display: inline-flex; /* Updated to inline-flex */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    padding-top: 7em;
+    /* make inline block */
+    
+}
+
+h2.question {
+    background-color: #f0f0f0;
+}
+
+.answer {
+    background-color: #e0e0e0;
+    margin-left: 50px;
+    /* Indent answer cards */
+}
+
+.answer-container {
+    .flashcard:hover {
+        cursor: pointer;
+    }
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
