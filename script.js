@@ -71,7 +71,8 @@ fetch(questionsFile)
 
                     // Set the background color of the clicked answer card
                     if (answer === correctAnswer) {
-                        answerCard.style.backgroundColor = 'green';
+                        answerCard.classList.add('correct-answer');
+                        // answerCard.style.backgroundColor = 'green';
                     } else {
                         answerCard.style.backgroundColor = 'red';
                     }
@@ -80,6 +81,8 @@ fetch(questionsFile)
                     allAnswerCards.forEach(card => {
                         if (card !== answerCard) {
                             card.style.backgroundColor = '';
+                            // remove correct-answer class from element
+                            card.classList.remove('correct-answer');
                         }
                     });
 

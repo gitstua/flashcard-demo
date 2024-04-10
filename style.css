@@ -41,6 +41,14 @@ h2.question {
     justify-content: space-between;
 }
 
+.correct-answer {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: 2px solid #4CAF50; /* Green border */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 0 10px #4CAF50; /* Green box shadow */
+}
+
 #topic{
     font-weight: bolder;
 
