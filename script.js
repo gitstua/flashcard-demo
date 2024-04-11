@@ -43,16 +43,21 @@ fetch(questionsFile)
             // Shuffle the answers
             shuffleArray(answers);
 
+            //add a question-container div
+            const questionContainer = document.createElement('div');
+            questionContainer.classList.add('question-container');
+            flashcardContainer.appendChild(questionContainer);
+
             // Create a flashcard for the question
             const questionCard = document.createElement('h2');
             questionCard.classList.add('question');
             questionCard.textContent = question;
-            flashcardContainer.appendChild(questionCard);
+            questionContainer.appendChild(questionCard);
 
             // Create a container for the answer cards
             const answerContainer = document.createElement('div');
             answerContainer.classList.add('answer-container');
-            flashcardContainer.appendChild(answerContainer);
+            questionContainer.appendChild(answerContainer);
 
             // Create a flashcard for each answer
             answers.forEach(answer => {
@@ -69,13 +74,28 @@ fetch(questionsFile)
                         card.style.backgroundColor = '';
                     });
 
+                    setTimeout(() => {
+                        // Assuming each question is in a container with class 'question-container'
+                        const nextQuestion = answerCard.closest('.question-container').nextElementSibling;
+                        if (nextQuestion) {
+                            const header = document.querySelector('header');
+                            let headerHeight = 0;
+                            const headerStyle = getComputedStyle(header);
+                            if (headerStyle.position === 'fixed') {
+                                headerHeight = header.offsetHeight;
+                            }
+                            const scrollPosition = nextQuestion.offsetTop - headerHeight;
+                            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+                        }
+                    }, 2000); // 2000 milliseconds = 2 seconds
+
                     // Set the background color of the clicked answer card
                     if (answer === correctAnswer) {
                         answerCard.classList.add('correct-answer');
-                        // answerCard.style.backgroundColor = 'green';
                     } else {
                         answerCard.classList.add('incorrect-answer');
                     }
+
 
                     // Update all other answer cards to default color
                     allAnswerCards.forEach(card => {
