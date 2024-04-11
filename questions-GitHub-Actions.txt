@@ -7,7 +7,7 @@ How do you use an action from the GitHub Marketplace?, uses, imports, requires
 How do you pass data between steps?, outputs, inputs, variables
 How do you set up a matrix of different configurations for a job?, matrix, array, list
 How do you conditionally execute a step?, if, when, condition
-How do you access the value of a secret in a step?, ${{ secrets.NAME }}, ${{ env.NAME }}, ${{ secrets.name }}
+How do you access the value of a secret in a step?, ${{ secrets.NAME }}, ${{ env.NAME }}, ${{ secrets.value.name }}
 How do you cache dependencies to speed up a workflow?, actions/cache, actions/store, actions/save
 How do you create a custom action?, action.yml, action.js, action.sh
 How do you specify the name and description of a workflow?, name, description, title
